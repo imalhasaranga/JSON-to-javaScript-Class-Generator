@@ -3,24 +3,33 @@
 <head>
 	<meta charset="UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="vendor/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
 	<title></title>
 </head>
-<body>
+<body onload="prettyPrint()" >
 <div class="container">
 	<div class="header">
-		<h3>JSON to javaScript Class Generator</h3>
+		<h3>JSON to Angular-JsClass Generator </h3>
+		<p style="font-size:12px;">This Can be use to generate Angular JsClass defenitions from JSON, JsClasses can be directly serialize, deserialize from JSON. ( Angular-JsClass project is similar to Google's Gson project in java space) <a href="https://github.com/imalhasaranga/Angular-JSClass">more</a></p>
 	</div>
 	<div class="column">
-		<textarea  id="sourcedata" onkeyup="createclasses()" class="textinput"></textarea>
+		<input type="text" onkeyup="createclasses()" placeholder="Base Class name" style="width:48%" id="inputclassname" value="Base" />
+		<input type="text" onkeyup="createclasses()" placeholder="Your Project Module name" style="width:48%" id="inputmodname" value="JsClassTest" />
+		<textarea  id="sourcedata" onkeyup="createclasses()" class="textinput_1" placeholder="Your Highly Complex JSON here :)"></textarea>
 	</div>
 	<div class="column">
-		<textarea  id="resultdata" class="textinput"></textarea>
+		<pre class="prettyprint textinput pretag" id="resultdata" style="">
+			
+		</pre>
 	</div>
+	
+	</pre>
 	<div class="footer">
-		<h5>Copyright © 2016 Imal hasaranga</h5>
+		<h5>Copyright © 2016 <a href="http://imalhasaranga.com">Imal hasaranga</a></h5>
 	</div>
 </div>
-
+<script type="text/javascript" src="vendor/google-code-prettify/prettify.js"></script>
+<script src="vendor/google-code-prettify/lang-basic.js"  defer="defer"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
